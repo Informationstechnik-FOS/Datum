@@ -2,16 +2,16 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Eingabe with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Datum d = new Datum("23.03.2023");
+        System.out.println(d.getTag() + "."+ d.getMonat() +"."+ d. getJahr());
 
-        // Press Umschalt+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Datum d1 = new Datum(29, 3, 2023);
+        System.out.println("Datum: " + d1.toString()); /* Ausgabe: Datum: 29.3.2023 12:00:00 */
 
-            // Press Umschalt+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Strg+F8.
-            System.out.println("i = " + i);
+        Datum d2 = new Datum("15.12.2022 14:30:00");
+        System.out.println("Tag: " + d2.getTag()); // Ausgabe: Tag: 15
+        System.out.println("Monat: " + d2.getMonat()); // Ausgabe: Monat: 12
+        System.out.println("Jahr: " + d2.getJahr()); // Ausgabe: Jahr: 2022
+        System.out.println("Zeitpunkt: " + d2.getZeitpunkt()); // Ausgabe: Zeitpunkt: 2022-12-15T14:30
         }
     }
-}
